@@ -194,8 +194,9 @@ install_packages() {
 		export DEBIAN_FRONTEND=noninteractive
 		setup_debconf
 		run_cmd sudo apt-get update
-		run_cmd sudo apt-get install -y python-dev python-setuptools build-essential python-mysqldb git ntp vim screen htop mariadb-server mariadb-common libmariadbclient-dev  libxslt1.1 libxslt1-dev redis-server libssl-dev libcrypto++-dev postfix nginx supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base curl curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
-nodejs
+		run_cmd sudo apt-get install -y curl
+		run_cmd sudo apt-get install -y curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
+		run_cmd sudo apt-get install -y python-dev python-setuptools build-essential python-mysqldb git ntp vim screen htop mariadb-server mariadb-common libmariadbclient-dev  libxslt1.1 libxslt1-dev redis-server libssl-dev libcrypto++-dev postfix nginx supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base npm
 
 		echo "Installing wkhtmltopdf"
 		install_wkhtmltopdf_deb
